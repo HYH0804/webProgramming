@@ -29,3 +29,28 @@ exports.uploadPost = async (req, res, next) => {
         next(error);
     }
 };
+
+exports.updatePost = async (req, res, next) => {
+    try {
+        const post = await Post.update({
+            content: req.body.content,
+            img: req.body.url,
+        }, {
+            where: { id: req.params.id }
+        });
+        res.redirect('/');
+    } catch (error) {
+        console.error(error);
+        next(error);
+    }
+};
+
+exports.deletePost = async (req, res, next) => {
+    try {
+        await Post.destroy({ where: { id: req.params.id } });
+        res.send('OK');
+    } catch (error) {
+        console.error(error);
+        next(error);
+    }
+};
