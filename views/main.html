@@ -33,6 +33,7 @@
             <div class="twit-author">{{twit.User.nick}}</div>
 
             {% if twit.User.id === user.id %}
+            <div class="twit-author">{{twit.updatedAt}}</div>
             <button class="twit-edit">수정</button>
             <button class="twit-delete">삭제</button>
             {% endif %}

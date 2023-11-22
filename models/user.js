@@ -24,6 +24,10 @@ class User extends Sequelize.Model {
             snsId: {
                 type: Sequelize.STRING(30),
                 allowNull: true, //email은 local 일때, snsId는 kakao 일때
+            },
+            team: {
+                type: Sequelize.STRING(15),
+                allowNull: true,
             }
         }, {
             sequelize,
