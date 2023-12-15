@@ -13,7 +13,7 @@ exports.renderMain = async (req, res, next) => {
         const posts = await Post.findAll({
             include: {
                 model: User,
-                attributes: ['id', 'nick'],
+                attributes: ['id', 'nick','team'],
             },
             order: [['createdAt', 'DESC']],
         });

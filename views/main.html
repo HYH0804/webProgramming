@@ -21,11 +21,22 @@
         </form>
     </div>
     {% endif %}
-    <div class="twits"> <!--트윗 검색화면-->
-<!--        <form id="hashtag-form" action="/hashtag">
-            <input type="text" name="hashtag" placeholder="태그 검색">
-            <button class="btn">검색</button>
-        </form> -->
+    <div class="twits">
+        <div id="wg-api-football-standings"
+             data-host="api-football-v1.p.rapidapi.com"
+             data-key="2511a3196emsh38e0f00842675d1p117797jsn37d821d519001"
+             data-league="39"
+             data-team=""
+             data-season="2023"
+             data-theme=""
+             data-show-errors="true"
+             data-show-logos="true"
+             class="wg_loader">
+        </div>
+        <script
+                type="module"
+                src="https://widgets.api-sports.io/2.0.3/widgets.js">
+        </script>
         {% for twit in twits %}
         <div class="twit"> <!--목록-->
             <input type="hidden" value="{{twit.User.id}}" class="twit-user-id">
@@ -33,6 +44,7 @@
             <div class="twit-author">{{twit.User.nick}}</div>
 
             {% if twit.User.id === user.id %}
+            <div class="twit-author">{{twit.User.team}}</div>
             <div class="twit-author">{{twit.updatedAt}}</div>
             <button class="twit-edit">수정</button>
             <button class="twit-delete">삭제</button>

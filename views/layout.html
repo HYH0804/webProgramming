@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">서비스 이름</a>
+    <a class="navbar-brand" href="#">고급웹프로그래밍</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,33 +21,9 @@
           <a class="nav-link active" aria-current="page" href="#">내 정보</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="https://github.com/HYH0804">Link</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            팀별 게시판
-          </a>
-          <ul class="dropdown-menu"> <!--클릭하면 각 팀 게시판으로-->
-            <li><a class="dropdown-item" href="#"></a></li>
-            <li><a class="dropdown-item" href="#">ManCity</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Liverpool</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Arsenal</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Tottenham Hotspur</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Aston Villa</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Manchester United</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Newcastle United</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Chelsea</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Wolverhampton</a></li>
-          </ul>
-        </li>
+
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="게시물 찾기" aria-label="Search">
@@ -65,10 +41,6 @@
         <div>응원 팀</div>
         <div class="count following-count">{{user.team}}</div>
       </div>
-<!--      <div class="half">
-        <div>팔로워</div>
-        <div class="count follower-count">{{followerCount}}</div>
-      </div>-->
       <input id="my-id" type="hidden" value="{{user.id}}">
       <a id="my-profile" href="/profile" class="btn">내 프로필</a>
       <a id="logout" href="/auth/logout" class="btn">로그아웃</a>
@@ -84,7 +56,6 @@
         </div>
         <a id="join" href="/join" class="btn">회원가입</a>
         <button id="login" type="submit" class="btn">로그인</button>
-        <a id="kakao" href="/auth/kakao" class="btn">카카오톡</a>
       </form>
       {% endif %}
     </div>
